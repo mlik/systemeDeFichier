@@ -10,7 +10,7 @@ public class Repertoire extends Noeud {
 	}
 	
 	public void ajouter(Noeud noeud){
-		
+		contenu.add(noeud);
 	}
 	
 	
