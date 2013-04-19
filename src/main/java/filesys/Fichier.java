@@ -7,6 +7,11 @@ public class Fichier extends Noeud {
 		this.nom = nom;
 		this.taille = taille;
 	}
+
+	@Override
+	public int getTaille() {
+		return taille;
+	}
 	 
 	 
 }
