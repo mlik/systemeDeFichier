@@ -65,5 +65,16 @@ public class SystemeDeFichierTestCase {
 		
 	}
 	
+	@Test
+	public void testAjoutRepertoireALuiMeme(){
+		Repertoire repertoireRacine = new Repertoire("racine");
+		try {
+			repertoireRacine.ajouter(repertoireRacine);
+			fail();
+		} catch (Exception e) {
+			assertEquals(MessagesErreurs.memeInstance, e.getMessage());
+		}
+	}
+	
 
 }
