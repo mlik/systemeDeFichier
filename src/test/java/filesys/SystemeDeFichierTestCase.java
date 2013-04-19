@@ -43,10 +43,26 @@ public class SystemeDeFichierTestCase {
 		Repertoire repertoireRacine = new Repertoire("racine");
 		try {
 			repertoireRacine.ajouter(null);
+			fail();
 		} catch (Exception e) {
-			fail(e.getMessage());
 			assertEquals(MessagesErreurs.referenceNull, e.getMessage());
 		}
+	}
+	
+	@Test
+	public void testAjoutElementAvecLeMemeNom(){
+		Repertoire repertoireRacine = new Repertoire("racine");
+		Repertoire repertoireNiveau1 = new Repertoire("niveau1");
+		Fichier fichierA = new Fichier("niveau1", 20);
+		
+		try {
+			repertoireRacine.ajouter(repertoireNiveau1);
+			repertoireRacine.ajouter(fichierA);
+			fail();
+		} catch (Exception e) {
+			assertEquals(MessagesErreurs.elementDupliquee, e.getMessage());
+		}
+		
 	}
 	
 
