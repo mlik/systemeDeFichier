@@ -76,5 +76,18 @@ public class SystemeDeFichierTestCase {
 		}
 	}
 	
+	@Test
+	public void testAjoutRepertoireIndirectement(){
+		Repertoire repertoireRacine = new Repertoire("racine");
+		Repertoire repertoireNiveau1 = new Repertoire("niveau1");
+		try {
+			repertoireRacine.ajouter(repertoireNiveau1);
+			repertoireNiveau1.ajouter(repertoireRacine);
+			fail();
+		} catch (Exception e) {
+			assertEquals(MessagesErreurs.memeInstanceIndirectement, e.getMessage());
+		}
+	}
+	
 
 }
