@@ -4,6 +4,29 @@
   <artifactId>systemeDeFichier</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Système de fichier</name>
+  <reporting>
+  	<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>2.10</version>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>2.5.2</version>
+      </plugin>
+      <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-surefire-report-plugin</artifactId>
+	  </plugin>
+    </plugins>
+  </reporting>
   <dependencies>
   	<dependency>
   		<groupId>junit</groupId>
