@@ -40,4 +40,7 @@
   		<type>maven-plugin</type>
   	</dependency>
   </dependencies>
+  <description>projet qui gere la gestion de fichiers.
+controle continu demandé par notre prof M. Lopes</description>
+  <url>https://github.com/mlik/systemeDeFichier</url>
 </project>

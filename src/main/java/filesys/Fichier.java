@@ -1,18 +1,18 @@
 package filesys;
 
 /**
- * 
+ * classe fichier 
  * @author mlik
  *
  */
 public class Fichier extends Noeud {
 	/**
-	 * 
+	 * taille de fichier
 	 */
 	 public int taille;
 
 	 /**
-	  * 
+	  * Constructeur de la classe fichier
 	  * @param nom
 	  * @param taille
 	  */
